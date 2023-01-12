@@ -18,7 +18,5 @@ namespace BillingSystem.Helper
         {
             return DateTime.TryParse(dateTime, out var date);
         }
-
-
     }
 }

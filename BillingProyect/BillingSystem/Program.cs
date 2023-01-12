@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using BillingSystem.Controller;
+using BillingSystem.View;
+
+BillingSystemApp myBillingSys = new();
+MainMenu.Show(myBillingSys);

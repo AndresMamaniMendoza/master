@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillingSystemTest", "BillingProyect\BillingSystemTest.csproj", "{9410301B-9CA2-4CCE-A14C-CE7BF465AE82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillingSystem", "BillingSystem\BillingSystem.csproj", "{316E3002-3A29-4A67-AB00-9A7A49423808}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9410301B-9CA2-4CCE-A14C-CE7BF465AE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9410301B-9CA2-4CCE-A14C-CE7BF465AE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9410301B-9CA2-4CCE-A14C-CE7BF465AE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9410301B-9CA2-4CCE-A14C-CE7BF465AE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316E3002-3A29-4A67-AB00-9A7A49423808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316E3002-3A29-4A67-AB00-9A7A49423808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316E3002-3A29-4A67-AB00-9A7A49423808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316E3002-3A29-4A67-AB00-9A7A49423808}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2A066A3-04B1-4788-9FDD-325DBA83066B}
+	EndGlobalSection
+EndGlobal

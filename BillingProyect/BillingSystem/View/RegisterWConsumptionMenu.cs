@@ -30,10 +30,17 @@ namespace BillingSystem.View
             List<string> attributes = new();
             attributes.Add(date);
             attributes.Add(reading);
+            try
+            {
+                myWCR.LoadAttributes(attributes);
+                Console.WriteLine("Reading registered");
+                MainMenu.Show(myApp, myWCR);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
-            myWCR.LoadAttributes(attributes);
-            Console.WriteLine("Reading registered");
-            MainMenu.Show(myApp, myWCR);
         }
 
         public static int verificateReading(string rNum)

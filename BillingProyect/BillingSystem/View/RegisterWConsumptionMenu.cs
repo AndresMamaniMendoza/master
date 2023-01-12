@@ -14,6 +14,8 @@ namespace BillingSystem.View
         {
             var myAppI = myApp;
             Console.WriteLine("(To cancel enter the letter C)");
+            Console.WriteLine("Associate’s ID:");
+            string id = Console.ReadLine();
             Console.WriteLine("Reading in liters:");
             string reading = Console.ReadLine();
             int readingNum = verificateReading(reading);

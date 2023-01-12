@@ -1,5 +1,5 @@
-using BillingSystem.Model;
 using BillingSystem.Controller;
+using BillingSystem.Model;
 
 namespace BillingProyect
 {
@@ -10,7 +10,7 @@ namespace BillingProyect
         [TestMethod]
         public void ShouldRegisterNewMemberInTheSystemWhenAUserIsNotExist()
         {
-            var member = new Member();
+            var member = new Associate();
             member.Id = 1;
             member.Name = "Andres";
             member.Lastname = "Mamani";
@@ -20,16 +20,15 @@ namespace BillingProyect
             app.RegisterMember(member);
 
             var actual = 1;
-            var result = app.memberList;
+            var result = app.associateList;
 
             Assert.AreEqual(result.Count, actual);
-
         }
 
         [TestMethod]
         public void ShouldCatchExceptionWhenAUserExist()
         {
-            var member = new Member
+            var member = new Associate
             {
                 Id = 1,
                 Name = "Andres",
@@ -40,50 +39,21 @@ namespace BillingProyect
             var app = new BillingSystemApp();
             app.RegisterMember(member);
 
-            var member2 = new Member
+            var member2 = new Associate
             {
                 Id = 1
             };
 
             var actual = Assert.ThrowsException<Exception>(() => app.RegisterMember(member2)).Message;
-            var expected = "The member already exists in the list.";
+            var expected = "ERROR: Associate is already registered.";
 
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestMethod]
-        //public void ShouldAddConsumption()
-        //{
-        //    var member = new Member
-        //    {
-        //        Id = 1,
-        //        Name = "Andres",
-        //        Lastname = "Mamani",
-        //        Direction = "Direction"
-        //    };
-
-        //    var app = new BillingSystemApp();
-        //    app.RegisterMember(member);
-
-        //    app.RegisterWaterConsumptionReading(1, "Enero/2022", 100);
-
-        //    var actual = app.memberList[0].WaterConsumptionPerMonth;
-
-        //    for (int i = 0; i < actual.Count; i++)
-        //    {
-        //        Console.WriteLine(actual[i]);
-        //    }
-
-
-
-        //    var expected = new Dictionary<string, int>();
-
-        //    Assert.AreEqual(1, 1);
-        //}
         [TestMethod]
-        public void ShouldAddConsumption()
+        public void ShouldRegisterNewWaterConsumptionInTheSystemWhenAUserExist()
         {
-            var member = new Member
+            var member = new Associate
             {
                 Id = 1,
                 Name = "Andres",
@@ -91,13 +61,42 @@ namespace BillingProyect
                 Direction = "Direction"
             };
 
-            member.AddConsumption("enero", 100);
+            var app = new BillingSystemApp();
+            app.RegisterMember(member);
+
+            WaterConsumption waterConsumption = new WaterConsumption();
+            var attributes = new List<string>
+            {
+                "10/12/2022",
+                "200"
+            };
+
+            waterConsumption.LoadAttributes(attributes);
+           
+            app.RegisterWaterConsumptionReading(member.Id, waterConsumption);
+
+            var actual = 1;
+            var expected = member.waterConsumptionList.Count;
+            Assert.AreEqual(expected, actual);
+        }
 
 
-            var x = new Dictionary<string, int>();
-            x.Add("erey", 200);
+        [TestMethod]
+        public void ShouldCatchExceptionOnWaterConsumptionRegistrationWhenAssociateIsNotExist()
+        {
+            var app = new BillingSystemApp();
+            WaterConsumption waterConsumption = new WaterConsumption();
+            var attributes = new List<string>
+            {
+                "10/12/2022",
+                "200"
+            };
+            waterConsumption.LoadAttributes(attributes);
 
-            Assert.AreEqual(member.WaterConsumptionPerMonth.Count, 2);
+            var actual = Assert.ThrowsException<Exception>(() => app.RegisterWaterConsumptionReading(2, waterConsumption)).Message;
+            var expected = "ERROR: Associate not found.";
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

@@ -10,35 +10,40 @@ namespace BillingSystem.View
 {
     static class RegisterWConsumptionMenu
     {
-        public static void Show(BillingSystemApp myApp)
+        public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
         {
             var myAppI = myApp;
             Console.WriteLine("(To cancel enter the letter C)");
             Console.WriteLine("Reading in liters:");
             string reading = Console.ReadLine();
             int readingNum = verificateReading(reading);
+            string date = "any";
             if (readingNum != 0)
             {
                 Console.WriteLine("Date:");
-                string name = Console.ReadLine();
+                date = Console.ReadLine();
             }
             else
             {
-                Show(myAppI);
+                Show(myAppI, myWCR);
             }
+            List<string> attributes = new();
+            attributes.Add(date);
+            attributes.Add(reading);
 
+            myWCR.LoadAttributes(attributes);
         }
 
-        public static int verificateReading(string id)
+        public static int verificateReading(string rNum)
         {
-            int idNum = 0;
-            bool success = int.TryParse(id, out idNum);
+            int rNumI = 0;
+            bool success = int.TryParse(rNum, out rNumI);
             if (!success)
             {
-                Console.WriteLine("ERROR: Wrong Identification document");
+                Console.WriteLine("ERROR: please enter integers only.");
                 return 0;
             }
-            return idNum;
+            return rNumI;
 
         }
 

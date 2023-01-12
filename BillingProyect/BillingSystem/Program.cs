@@ -1,5 +1,7 @@
 ﻿using BillingSystem.Controller;
+using BillingSystem.Model;
 using BillingSystem.View;
 
 BillingSystemApp myBillingSys = new();
-MainMenu.Show(myBillingSys);
+WaterConsumption waterConsumption = new WaterConsumption();
+MainMenu.Show(myBillingSys, waterConsumption);

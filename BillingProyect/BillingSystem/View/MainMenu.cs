@@ -1,4 +1,5 @@
 ﻿using BillingSystem.Controller;
+using BillingSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -10,7 +11,7 @@ namespace BillingSystem.View
 {
     public static class MainMenu
     {
-        public static void Show(BillingSystemApp myApp)
+        public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
         {
             var myAppI = myApp;
             Console.WriteLine("*--------------------- WELCOME TO WACO 3.8 ---------------------*\n");
@@ -21,12 +22,12 @@ namespace BillingSystem.View
             {
                 case 1:
                     {
-                        RegisterAssociateMenu.Show(myAppI);
+                        RegisterAssociateMenu.Show(myAppI, myWCR);
                     }
                     break;
                 case 2:
                     {
-                        RegisterWConsumptionMenu.Show(myAppI);
+                        RegisterWConsumptionMenu.Show(myAppI, myWCR);
                     }
                     break;
 

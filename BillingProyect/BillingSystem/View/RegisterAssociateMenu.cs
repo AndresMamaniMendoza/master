@@ -10,7 +10,7 @@ namespace BillingSystem.View
 {
     static class RegisterAssociateMenu
     {
-        public static void Show (BillingSystemApp myApp)
+        public static void Show (BillingSystemApp myApp, WaterConsumption myWCR)
         {
             var myAppI = myApp;
             Console.WriteLine("(To cancel enter the letter C)");
@@ -34,7 +34,7 @@ namespace BillingSystem.View
             {
                 myApp.RegisterMember(associate);
                 Console.WriteLine("Associate Added Succesfully!");
-                MainMenu.Show(myApp);
+                MainMenu.Show(myApp, myWCR);
 
             }
             catch(Exception ex)
@@ -44,7 +44,7 @@ namespace BillingSystem.View
             }
             else
             {
-                Show(myAppI);
+                Show(myAppI, myWCR);
             }
 
         }

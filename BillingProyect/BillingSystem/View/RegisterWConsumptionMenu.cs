@@ -32,6 +32,8 @@ namespace BillingSystem.View
             attributes.Add(reading);
 
             myWCR.LoadAttributes(attributes);
+            Console.WriteLine("Reading registered");
+            MainMenu.Show(myApp, myWCR);
         }
 
         public static int verificateReading(string rNum)

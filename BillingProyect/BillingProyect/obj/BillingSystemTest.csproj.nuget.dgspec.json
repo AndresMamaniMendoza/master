@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {}
+    "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {
+    "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
+        "projectUniqueName": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
         "projectName": "BillingSystemTest",
-        "projectPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\obj\\",
+        "projectPath": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
+        "packagesPath": "C:\\Users\\Michelle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingProyect\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Michelle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
-                "projectPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj"
+              "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
+                "projectPath": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj"
               }
             }
           }
@@ -82,25 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
+    "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
         "projectName": "BillingSystem",
-        "projectPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\obj\\",
+        "projectPath": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
+        "packagesPath": "C:\\Users\\Michelle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Michelle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,7 +99,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -142,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

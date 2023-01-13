@@ -11,7 +11,7 @@ namespace BillingSystem.View
 {
     static class RegisterAssociateMenu
     {
-        public static void Show (BillingSystemApp myApp, WaterConsumption myWCR)
+        public static void Show (BillingSystemApp myApp)
         {
             var myAppI = myApp;
             Console.WriteLine("Associate’s ID:");
@@ -36,7 +36,7 @@ namespace BillingSystem.View
             {
                 myApp.RegisterMember(associate);
                 Console.WriteLine("Associate Added Succesfully!");
-                MainMenu.Show(myApp, myWCR);
+                MainMenu.Show(myApp);
 
             }
             catch(Exception ex)
@@ -47,7 +47,7 @@ namespace BillingSystem.View
             else
             {
                 Console.WriteLine("ERROR: Wrong Identification document");
-                Show(myAppI, myWCR);
+                Show(myAppI);
             }
 
         }

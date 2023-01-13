@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {}
+    "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {
+    "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
         "projectName": "BillingSystemTest",
-        "projectPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
+        "projectPath": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingProyect\\BillingSystemTest.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingProyect\\obj\\",
+        "outputPath": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingProyect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
-                "projectPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj"
+              "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
+                "projectPath": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
+    "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
         "projectName": "BillingSystem",
-        "projectPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
+        "projectPath": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\New folder\\master\\master\\BillingProyect\\BillingSystem\\obj\\",
+        "outputPath": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

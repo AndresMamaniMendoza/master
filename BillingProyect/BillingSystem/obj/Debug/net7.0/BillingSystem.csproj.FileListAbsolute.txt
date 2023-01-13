@@ -43,3 +43,18 @@ C:\Users\andre\Desktop\New folder\master\master\BillingProyect\BillingSystem\obj
 C:\Users\andre\Desktop\New folder\master\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.pdb
 C:\Users\andre\Desktop\New folder\master\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.genruntimeconfig.cache
 C:\Users\andre\Desktop\New folder\master\master\BillingProyect\BillingSystem\obj\Debug\net7.0\ref\BillingSystem.dll
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\bin\Debug\net7.0\BillingSystem.exe
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\bin\Debug\net7.0\BillingSystem.deps.json
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\bin\Debug\net7.0\BillingSystem.runtimeconfig.json
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\bin\Debug\net7.0\BillingSystem.dll
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\bin\Debug\net7.0\BillingSystem.pdb
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.csproj.AssemblyReference.cache
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.AssemblyInfo.cs
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.dll
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\refint\BillingSystem.dll
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.pdb
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\BillingSystem.genruntimeconfig.cache
+C:\Users\andre\Desktop\ultimate\master\BillingProyect\BillingSystem\obj\Debug\net7.0\ref\BillingSystem.dll

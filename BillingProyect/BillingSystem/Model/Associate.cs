@@ -6,7 +6,7 @@
 
         public List<Payment> paymentList = new List<Payment>();
 
-        public List<Debts> debtsList = new List<Debts>();
+        public List<Debt> debtsList = new List<Debt>();
         public void AddConsumption(WaterConsumption waterConsumption)
         {
             waterConsumptionList.Add(waterConsumption);
@@ -15,7 +15,7 @@
         {
             paymentList.Add(payment);
         }
-        public void AddDebts(Debts debts)
+        public void AddDebts(Debt debts)
         {
             debtsList.Add(debts);
         }

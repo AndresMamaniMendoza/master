@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BillingSystem.Model
 {
-    public class Debts
+    public class Debt
     {
         public int IdAssociate { get; set; }
         public int Amount { get; set; }

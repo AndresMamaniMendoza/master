@@ -73,7 +73,7 @@ namespace BillingProyect
             };
 
             waterConsumption.LoadAttributes(attributes);
-           
+
             app.RegisterWaterConsumptionReading(member.Id, waterConsumption);
 
             var actual = 1;
@@ -102,22 +102,13 @@ namespace BillingProyect
 
 
         [TestMethod]
-        public void Shoult()
+        public void ShouldRegisterPaymentWhenTheAssociateHaveDebts()
         {
             var member = new Associate();
             member.Id = 1234;
             member.Name = "Andres";
             member.Lastname = "Mamani";
             member.Direction = "Direction";
-
-            var w = new Debts();
-            w.Status = true;
-            w.Amount = 40;
-
-            var t = new List<Debts>();
-            t.Add(w);
-
-            member.debtsList = t;
 
             var app = new BillingSystemApp();
             app.RegisterMember(member);
@@ -129,39 +120,67 @@ namespace BillingProyect
             };
             WaterConsumption waterConsumption = new WaterConsumption();
             waterConsumption.LoadAttributes(attributesWaterConsumption);
-
-
             app.RegisterWaterConsumptionReading(1234, waterConsumption);
 
             app.RegisterPayment(1234);
 
-
-            var actual = member.debtsList[0].Amount;
+            var actual = app.associateList[0].debtsList[0].Amount;
             var expected = 0;
 
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ShoulCatchExceptionOnRegisterPaymentWhenAssociateIsNotExist()
+        {
+            var app = new BillingSystemApp();
+            var actual = Assert.ThrowsException<Exception>(() => app.RegisterPayment(1234)).Message;
+            var expected = "ERROR: Associate not found.";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ShouldCatchExceptionOnRegisterPaymentWhenTheAssociateHasNoDebts()
+        {
+            var member = new Associate();
+            member.Id = 1234;
+            member.Name = "Andres";
+            member.Lastname = "Mamani";
+            member.Direction = "Direction";
+
+            var app = new BillingSystemApp();
+            app.RegisterMember(member);
+
+            var actual = Assert.ThrowsException<Exception>(() => app.RegisterPayment(1234)).Message;
+            var expected = "ERROR: Associate dont have debts.";
+            Assert.AreEqual(expected, actual);
+        }
 
 
+        [TestMethod]
+        public void ShouldCatchExceptionOnRegisterPaymentWhenTheAssociateDebtsIsZero()
+        {
+            var member = new Associate();
+            member.Id = 1234;
+            member.Name = "Andres";
+            member.Lastname = "Mamani";
+            member.Direction = "Direction";
 
+            var app = new BillingSystemApp();
+            app.RegisterMember(member);
 
+            var attributesWaterConsumption = new List<string>
+            {
+                "01/01/2022",
+                "0"
+            };
+            WaterConsumption waterConsumption = new WaterConsumption();
+            waterConsumption.LoadAttributes(attributesWaterConsumption);
+            app.RegisterWaterConsumptionReading(1234, waterConsumption);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            var actual = Assert.ThrowsException<Exception>(() => app.RegisterPayment(1234)).Message;
+            var expected = "ERROR: Associate dont have debts.";
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

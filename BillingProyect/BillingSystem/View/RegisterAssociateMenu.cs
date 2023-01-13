@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BillingSystem.Controller;
+using BillingSystem.Helper.ViewHelpers;
 
 namespace BillingSystem.View
 {
@@ -16,9 +17,11 @@ namespace BillingSystem.View
             Console.WriteLine("(To cancel enter the letter C)");
             Console.WriteLine("Associate’s ID:");
             string id = Console.ReadLine();
-            int idNum = verificateID(id);
-            if(idNum !=0)
+            bool convert = ViewHelper.VerifyNumber(id);
+
+            if(convert)
             {
+            int idNum = ViewHelper.ConvertNumber(id);
             Console.WriteLine("Associate’s Name:");
             string name = Console.ReadLine();
             Console.WriteLine("Associate’s Last name:");
@@ -44,24 +47,11 @@ namespace BillingSystem.View
             }
             else
             {
+                Console.WriteLine("ERROR: Wrong Identification document");
                 Show(myAppI, myWCR);
             }
 
         }
-
-        public static int verificateID(string id)
-        {
-            int idNum = 0;
-            bool success = int.TryParse(id, out idNum);
-            if(!success)
-            {
-                Console.WriteLine("ERROR: Wrong Identification document"); 
-                return 0;
-            }
-            return idNum;
-            
-        }
-
 
     }
 }

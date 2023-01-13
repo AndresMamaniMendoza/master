@@ -17,15 +17,15 @@ namespace BillingSystem.View
             Console.WriteLine("*--------------------- WELCOME TO WACO 3.8 ---------------------*\n");
             Console.WriteLine("ENTER A NUMBER ACCORDING TO YOUR SELECTION");
             Console.WriteLine("1- Register a new associate." + "\n2- Register a new water consumption reading.");
-            int selection = int.Parse(Console.ReadLine());
+            string selection = (Console.ReadLine());
             switch(selection)
             {
-                case 1:
+                case "1":
                     {
                         RegisterAssociateMenu.Show(myAppI, myWCR);
                     }
                     break;
-                case 2:
+                case "2":
                     {
                         RegisterWConsumptionMenu.Show(myAppI, myWCR);
                     }
@@ -34,6 +34,7 @@ namespace BillingSystem.View
                 default:
                     {
                         Console.WriteLine("Please enter a valid number");
+                        Show(myApp, myWCR);
                     }
                     break;
             }

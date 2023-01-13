@@ -11,7 +11,7 @@ namespace BillingSystem.View
 {
     internal class CollectorMenu
     {
-        public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
+        public static void Show(BillingSystemApp myApp)
         {
             var myAppI = myApp;
             Console.WriteLine("Associate’s ID:");
@@ -23,48 +23,52 @@ namespace BillingSystem.View
                 bool memberExists = myApp.CheckIfMemberExist(idNum);
                 if (memberExists)
                 {
-                    Console.WriteLine($"Total Amount = {myApp.associateList.Find(x => x.Id = idNum)}");
-                    string reading = Console.ReadLine();
-                    //Verify reading
-                    bool convertRead = ViewHelper.VerifyNumber(reading);
-                    if (convertRead)
+                    int associateTotalAmmount = myApp.CalculateTotalPayment(myApp.FindAssociateById(idNum).waterConsumptionList);
+                    if (associateTotalAmmount > 0)
                     {
-                        int readingNum = ViewHelper.ConvertNumber(reading);
+                        Console.WriteLine($"Total Amount = {associateTotalAmmount} Bs");
+                        Console.WriteLine($"By = {myApp.FindAssociateById(idNum).waterConsumptionList.Count} Month(s)");
+                        Console.WriteLine("\nDo you want to register the payment?\n1. Yes\n2. No");
+                        bool choosing = true;
+                        while (choosing)
+                        {
+                            string selection = Console.ReadLine();
+                            switch (selection)
+                            {
+                                case "1":
+                                    Console.WriteLine("Payment registered successfully\n");
+                                    choosing= false;
+                                    MainMenu.Show(myAppI);
+                                    break;
+                                case "2":
+                                    choosing = false;
+                                    Console.WriteLine("Payment cancelled");
+                                    MainMenu.Show(myAppI);
+                                    break;
+                                default:
+                                    Console.WriteLine("Please enter a valid option");                                    
+                                    break;
+                            }
+                        }
 
-                        Console.WriteLine("Date:");
-                        string date = Console.ReadLine();
-                        List<string> attributes = new();
-                        attributes.Add(date);
-                        attributes.Add(reading);
-                        try
-                        {
-                            myWCR.LoadAttributes(attributes);
-                            Console.WriteLine("Reading registered");
-                            MainMenu.Show(myApp, myWCR);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.Message);
-                            Show(myAppI, myWCR);
-                        }
                     }
                     else
                     {
-                        Console.WriteLine("ERROR: please enter integers only");
-                        Show(myAppI, myWCR);
+                        Console.WriteLine("The associate doesn’t has debts ");
+                        MainMenu.Show(myAppI);
                     }
 
                 }
                 else
                 {
                     Console.WriteLine("ERROR: associate not found");
-                    Show(myAppI, myWCR);
+                    Show(myAppI);
                 }
             }
             else
             {
                 Console.WriteLine("ERROR: Wrong Identification document");
-                Show(myAppI, myWCR);
+                Show(myAppI);
             }
 
         }

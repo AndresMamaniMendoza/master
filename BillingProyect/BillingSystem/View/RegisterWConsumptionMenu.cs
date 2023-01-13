@@ -13,7 +13,7 @@ namespace BillingSystem.View
 {
     static class RegisterWConsumptionMenu
     {
-        public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
+        public static void Show(BillingSystemApp myApp)
         {
             var myAppI = myApp;
             Console.WriteLine("Associate’s ID:");
@@ -30,42 +30,42 @@ namespace BillingSystem.View
                     //Verify reading
                     bool convertRead = ViewHelper.VerifyNumber(reading);
                     if (convertRead)
-                    {
-                        int readingNum = ViewHelper.ConvertNumber(reading);
-
-                        Console.WriteLine("Date:");
+                    {                    
+                        Console.WriteLine("Date (DD/MM/YY):");
                         string date = Console.ReadLine();
                         List<string> attributes = new();
                         attributes.Add(date);
                         attributes.Add(reading);
+                        WaterConsumption associateWConsumption = new WaterConsumption();
                         try
                         {
-                            myWCR.LoadAttributes(attributes);
+                            associateWConsumption.LoadAttributes(attributes);
+                            myApp.RegisterWaterConsumptionReading(idNum, associateWConsumption);
                             Console.WriteLine("Reading registered");
-                            MainMenu.Show(myApp, myWCR);
+                            MainMenu.Show(myApp);
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine(ex.Message);
-                            Show(myAppI, myWCR);
+                            Show(myAppI);
                         }
                     }else
                     {
                         Console.WriteLine("ERROR: please enter integers only");
-                        Show(myAppI, myWCR);
+                        Show(myAppI);
                     }
 
                 }
                 else
                 {
                     Console.WriteLine("ERROR: associate not found");
-                    Show(myAppI, myWCR);
+                    Show(myAppI);
                 }
             }
             else
             {
                 Console.WriteLine("ERROR: Wrong Identification document");
-                Show(myAppI, myWCR);
+                Show(myAppI);
             }
 
         }

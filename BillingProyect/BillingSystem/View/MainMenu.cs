@@ -11,7 +11,7 @@ namespace BillingSystem.View
 {
     public static class MainMenu
     {
-        public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
+        public static void Show(BillingSystemApp myApp)
         {
             var myAppI = myApp;
             Console.WriteLine("*--------------------- WELCOME TO WACO 3.8 ---------------------*\n");
@@ -22,24 +22,24 @@ namespace BillingSystem.View
             {
                 case "1":
                     {
-                        RegisterAssociateMenu.Show(myAppI, myWCR);
+                        RegisterAssociateMenu.Show(myAppI);
                     }
                     break;
                 case "2":
                     {
-                        RegisterWConsumptionMenu.Show(myAppI, myWCR);
+                        RegisterWConsumptionMenu.Show(myAppI);
                     }
                     break;
                 case "3":
                     {
-                        CollectorMenu.Show(myAppI, myWCR);
+                        CollectorMenu.Show(myAppI);
                     }
                     break;
 
                 default:
                     {
                         Console.WriteLine("Please enter a valid number");
-                        Show(myApp, myWCR);
+                        Show(myApp);
                     }
                     break;
             }

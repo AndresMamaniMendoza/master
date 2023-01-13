@@ -1,5 +1,6 @@
 using BillingSystem.Controller;
 using BillingSystem.Model;
+using System.Collections.Generic;
 
 namespace BillingProyect
 {
@@ -98,5 +99,69 @@ namespace BillingProyect
 
             Assert.AreEqual(expected, actual);
         }
+
+
+        [TestMethod]
+        public void Shoult()
+        {
+            var member = new Associate();
+            member.Id = 1234;
+            member.Name = "Andres";
+            member.Lastname = "Mamani";
+            member.Direction = "Direction";
+
+            var w = new Debts();
+            w.Status = true;
+            w.Amount = 40;
+
+            var t = new List<Debts>();
+            t.Add(w);
+
+            member.debtsList = t;
+
+            var app = new BillingSystemApp();
+            app.RegisterMember(member);
+
+            var attributesWaterConsumption = new List<string>
+            {
+                "01/01/2022",
+                "200"
+            };
+            WaterConsumption waterConsumption = new WaterConsumption();
+            waterConsumption.LoadAttributes(attributesWaterConsumption);
+
+
+            app.RegisterWaterConsumptionReading(1234, waterConsumption);
+
+            app.RegisterPayment(1234);
+
+
+            var actual = member.debtsList[0].Amount;
+            var expected = 0;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

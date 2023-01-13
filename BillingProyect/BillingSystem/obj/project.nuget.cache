@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "TasZyiMVNGOUR9WM2d78PhoZ3x10oNBGHhtRtjXOTAaJvFnEMIi0lGGHWID7fSbApD4Yk7JM9gH7l0gsKYiW2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\Desktop\\ultimate\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
+=======
+  "dgSpecHash": "oQS0or9C919gjfs5LU+8dB/Ho85kBVMRRHjRVK+TEbA9Y0THjcJHsmFp1KNlN8dgKVBLYackjM3Ih/mcj4OG8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Michelle\\source\\repos\\Monitoring\\master\\BillingProyect\\BillingSystem\\BillingSystem.csproj",
+>>>>>>> 042da3f393c79eadd0f8a72c375b5e0f5ee3bfd3
   "expectedPackageFiles": [],
   "logs": []
 }

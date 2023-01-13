@@ -8,7 +8,6 @@ namespace BillingSystem.Model
 {
     public class Debt
     {
-        public int IdAssociate { get; set; }
         public int Amount { get; set; }
         public DateTime DateTime { get; set; }
         public bool Status { get; set; }

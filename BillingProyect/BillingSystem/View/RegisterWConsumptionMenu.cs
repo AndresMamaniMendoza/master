@@ -16,7 +16,6 @@ namespace BillingSystem.View
         public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
         {
             var myAppI = myApp;
-            Console.WriteLine("(To cancel enter the letter C)");
             Console.WriteLine("Associate’s ID:");
             string id = Console.ReadLine();
             bool convert = ViewHelper.VerifyNumber(id);

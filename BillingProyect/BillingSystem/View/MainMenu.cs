@@ -16,7 +16,7 @@ namespace BillingSystem.View
             var myAppI = myApp;
             Console.WriteLine("*--------------------- WELCOME TO WACO 3.8 ---------------------*\n");
             Console.WriteLine("ENTER A NUMBER ACCORDING TO YOUR SELECTION");
-            Console.WriteLine("1- Register a new associate." + "\n2- Register a new water consumption reading.");
+            Console.WriteLine("1- Register a new associate.\n2- Register a new water consumption reading.\n3- Register a new Payment");
             string selection = (Console.ReadLine());
             switch(selection)
             {
@@ -28,6 +28,11 @@ namespace BillingSystem.View
                 case "2":
                     {
                         RegisterWConsumptionMenu.Show(myAppI, myWCR);
+                    }
+                    break;
+                case "3":
+                    {
+                        CollectorMenu.Show(myAppI, myWCR);
                     }
                     break;
 

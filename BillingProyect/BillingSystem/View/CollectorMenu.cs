@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using BillingSystem.Controller;
+﻿using BillingSystem.Controller;
 using BillingSystem.Helper.ViewHelpers;
 using BillingSystem.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BillingSystem.View
 {
-    static class RegisterWConsumptionMenu
+    internal class CollectorMenu
     {
         public static void Show(BillingSystemApp myApp, WaterConsumption myWCR)
         {
@@ -25,7 +23,7 @@ namespace BillingSystem.View
                 bool memberExists = myApp.CheckIfMemberExist(idNum);
                 if (memberExists)
                 {
-                    Console.WriteLine("Reading in liters:");
+                    Console.WriteLine($"Total Amount = {myApp.associateList.Find(x => x.Id = idNum)}");
                     string reading = Console.ReadLine();
                     //Verify reading
                     bool convertRead = ViewHelper.VerifyNumber(reading);
@@ -49,7 +47,8 @@ namespace BillingSystem.View
                             Console.WriteLine(ex.Message);
                             Show(myAppI, myWCR);
                         }
-                    }else
+                    }
+                    else
                     {
                         Console.WriteLine("ERROR: please enter integers only");
                         Show(myAppI, myWCR);
@@ -72,3 +71,4 @@ namespace BillingSystem.View
 
     }
 }
+

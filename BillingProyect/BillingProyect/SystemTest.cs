@@ -139,8 +139,9 @@ namespace BillingProyect
             Assert.AreEqual(expected, actual);
         }
 
+
         [TestMethod]
-        public void ShouldCatchExceptionOnRegisterPaymentWhenTheAssociateHasNoDebts()
+        public void ShouldCatchExceptionOnRegisterPaymentWhenTheDebtsAssociateIsPaid()
         {
             var member = new Associate();
             member.Id = 1234;
@@ -156,9 +157,8 @@ namespace BillingProyect
             Assert.AreEqual(expected, actual);
         }
 
-
         [TestMethod]
-        public void ShouldCatchExceptionOnRegisterPaymentWhenTheAssociateDebtsIsZero()
+        public void ShouldCatchExceptionOnRegisterPaymentWhenTheDebtsAssociateIsZero()
         {
             var member = new Associate();
             member.Id = 1234;
@@ -169,6 +169,7 @@ namespace BillingProyect
             var app = new BillingSystemApp();
             app.RegisterMember(member);
 
+
             var attributesWaterConsumption = new List<string>
             {
                 "01/01/2022",
@@ -177,6 +178,7 @@ namespace BillingProyect
             WaterConsumption waterConsumption = new WaterConsumption();
             waterConsumption.LoadAttributes(attributesWaterConsumption);
             app.RegisterWaterConsumptionReading(1234, waterConsumption);
+
 
             var actual = Assert.ThrowsException<Exception>(() => app.RegisterPayment(1234)).Message;
             var expected = "ERROR: Associate dont have debts.";

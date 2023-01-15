@@ -36,6 +36,7 @@ namespace BillingSystem.View
                             switch (selection)
                             {
                                 case "1":
+                                    myApp.RegisterPayment(idNum);
                                     Console.WriteLine("Payment registered successfully\n");
                                     choosing= false;
                                     MainMenu.Show(myAppI);

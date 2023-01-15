@@ -70,10 +70,13 @@ namespace BillingSystem.Controller
             };
             
             associate.AddPayment(payment);
-            associate.debtsList.ForEach(x => x.Status = false); 
+            associate.debtsList.ForEach(x => x.Status = false);  
             associate.debtsList.ForEach(x => x.Amount = 0);
+            waterConsumptionList.ForEach(x => x.Amount = 0);
+            Console.WriteLine(waterConsumptionList);
+            
         }
-        
+
         public int CalculateTotalPayment(List<WaterConsumption> consumptionList)
         {
             const int pricePerLiter = 2;

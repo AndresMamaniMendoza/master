@@ -55,7 +55,23 @@ namespace BillingSystem.Controller
 
             var totalDebt = CalculateTotalPayment(waterConsumptionList);
 
+            var newDebt = new Debt();
+            newDebt.Status = true;
+            newDebt.Amount = totalDebt;
+            newDebt.DateTime = DateTime.Now;
+            
+            associateList[index].AddDebts(newDebt);
+            waterConsumptionList.ForEach(x => x.Amount = 0);
 
+            foreach (var debt in associateList[index].debtsList)
+            {
+                if (debt.Status)
+                {
+                    totalDebt += debt.Amount;
+                }
+            }
+            
+            
             if (totalDebt <= 0)
             {
                 throw new Exception("ERROR: Associate dont have debts.");
@@ -71,9 +87,6 @@ namespace BillingSystem.Controller
             
             associate.AddPayment(payment);
             associate.debtsList.ForEach(x => x.Status = false);  
-            associate.debtsList.ForEach(x => x.Amount = 0);
-            waterConsumptionList.ForEach(x => x.Amount = 0);
-            Console.WriteLine(waterConsumptionList);
             
         }
 
@@ -82,9 +95,9 @@ namespace BillingSystem.Controller
             const int pricePerLiter = 2;
             return consumptionList.Sum(x => x.Amount * pricePerLiter);
         }
-        
-        
-        //Metodos auxiliares
+
+
+        //Aux Methods
         public bool CheckIfMemberExist(int id)
         {
             return associateList.Any(x => x.Id == id);

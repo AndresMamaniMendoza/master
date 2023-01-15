@@ -3,7 +3,7 @@ using BillingSystem.Model;
 using BillingSystem.View;
 using System;
 
-Console.WriteLine("asd");
+//Console.WriteLine("asd");
 BillingSystemApp myBillingSys = new();
 WaterConsumption waterConsumption = new WaterConsumption();
 waterConsumption.Amount = 100;

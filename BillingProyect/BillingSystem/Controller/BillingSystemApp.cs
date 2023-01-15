@@ -5,6 +5,18 @@ namespace BillingSystem.Controller
     public class BillingSystemApp
     {
         public List<Associate> associateList = new();
+        
+        private List<Associate> associateListTest;
+
+        public BillingSystemApp(List<Associate> associateListTest)
+        {
+            this.associateList = associateListTest;
+        }
+
+        public BillingSystemApp()
+        {
+        }
+
         public void RegisterMember(Associate member)
         {
             if (CheckIfMemberExist(member.Id))
@@ -37,6 +49,7 @@ namespace BillingSystem.Controller
             {
                 throw new Exception("ERROR: Associate not found.");
             }
+            
             int index = FindIndexAssociateById(Id);
             var waterConsumptionList = associateList[index].waterConsumptionList;
 
@@ -47,21 +60,28 @@ namespace BillingSystem.Controller
             {
                 throw new Exception("ERROR: Associate dont have debts.");
             }
+            
             var associate = associateList[index];
+            
             var payment = new Payment
             {
                 Amount = totalDebt,
                 DateTime = DateTime.Now
             };
+            
             associate.AddPayment(payment);
-            associate.debtsList.ForEach(x => x.Status = false);
+            associate.debtsList.ForEach(x => x.Status = false); 
             associate.debtsList.ForEach(x => x.Amount = 0);
         }
+        
         public int CalculateTotalPayment(List<WaterConsumption> consumptionList)
         {
             const int pricePerLiter = 2;
             return consumptionList.Sum(x => x.Amount * pricePerLiter);
         }
+        
+        
+        //Metodos auxiliares
         public bool CheckIfMemberExist(int id)
         {
             return associateList.Any(x => x.Id == id);
